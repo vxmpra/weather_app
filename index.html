@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>WEATHER APP</h1>
+        <p>Введите координаты для добавления нового виджета погоды</p>
+      </header>
+
+      <div class="input-section">
+        <form id="coords-form">
+          <div class="input-group">
+            <label for="latitude">Широта:</label>
+            <input
+              type="text"
+              id="latitude"
+              placeholder="Например: 55.7558"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="longitude">Долгота:</label>
+            <input
+              type="text"
+              id="longitude"
+              placeholder="Например: 37.6173"
+              required
+            />
+          </div>
+          <button type="submit">Показать погоду</button>
+        </form>
+      </div>
+
+      <div id="widgets-container" class="widgets-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
