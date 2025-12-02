@@ -1,3 +1,5 @@
+const WEATHER_API_URL = 'https://api.openweathermap.org/data/2.5/weather';
+const YANDEX_MAPS_API_URL = 'https://api-maps.yandex.ru/2.1/';
 const OPENWEATHER_KEY = '95b615ed131ed09445e9e078a2c6d44e';
 const YANDEX_MAPS_KEY = 'db0526f0-22f9-471c-9e1b-65f064b8682c';
 
@@ -26,7 +28,7 @@ function loadYandexMaps() {
     }
 
     const script = document.createElement('script');
-    script.src = `https://api-maps.yandex.ru/2.1/?apikey=${YANDEX_MAPS_KEY}&lang=ru_RU`;
+    script.src = `${YANDEX_MAPS_API_URL}?apikey=${YANDEX_MAPS_KEY}&lang=ru_RU`;
     script.onload = function() {
         ymaps.ready(function() {
             yandexMapsLoaded = true;
@@ -115,7 +117,7 @@ async function fetchWeatherData(latitude, longitude) {
     }
 
     const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${OPENWEATHER_KEY}&units=metric&lang=ru`
+        `${WEATHER_API_URL}?lat=${latitude}&lon=${longitude}&appid=${OPENWEATHER_KEY}&units=metric&lang=ru`
     );
     
     console.log('Статус ответа:', response.status);
