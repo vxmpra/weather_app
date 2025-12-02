@@ -60,7 +60,8 @@ Weather App — это веб-приложение, позволяющее по�
 
 # Ссылка для доступа 
 
-https://weather-app-eta-five-17.vercel.app/
+weather-app-kolmykova-sasha.vercel.app
+
 
 
 
