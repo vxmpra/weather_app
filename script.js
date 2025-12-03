@@ -168,20 +168,16 @@ function createWeatherDetailsHTML(main, wind, weatherData, widgetId) {
             <div class="detail-item">
                 <span class="detail-label">Ощущается как</span>
                 <span class="detail-value">${Math.round(main.feels_like)}°C</span>
-            </div>
-            <div class="detail-item">
+            </div><div class="detail-item">
                 <span class="detail-label">Влажность</span>
                 <span class="detail-value">${main.humidity}%</span>
-            </div>
-            <div class="detail-item">
+            </div><div class="detail-item">
                 <span class="detail-label">Давление</span>
                 <span class="detail-value">${Math.round(main.pressure * 0.75)} мм рт.ст.</span>
-            </div>
-            <div class="detail-item">
+            </div><div class="detail-item">
                 <span class="detail-label">Ветер</span>
                 <span class="detail-value">${wind.speed} м/с</span>
-            </div>
-            <div class="detail-item">
+            </div><div class="detail-item">
                 <span class="detail-label">Видимость</span>
                 <span class="detail-value">${(weatherData.visibility / 1000).toFixed(1)} км</span>
             </div>
@@ -282,3 +278,4 @@ function removeWidget(widgetId) {
         widgetElement.remove();
     }
 }
+
